@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reaper Syndicate</title>
+<style>
+    body {
+        font-family: 'Courier New', monospace;
+        background-color: #0a0a0a;
+        color: #7700ff;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        text-align: center;
+        padding: 20px;
+        background: linear-gradient(90deg, #000, #111, #000);
+        border-bottom: 2px solid #ff0000;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+        color: #7700ff;
+    }
+    nav {
+        display: flex;
+        justify-content: center;
+        background: #111;
+        border-bottom: 1px solid #ff0000;
+    }
+    nav button {
+        background: none;
+        border: none;
+        color: #7700ff;
+        padding: 14px 20px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+    nav button:hover {
+        background: #222;
+    }
+    .tab {
+        display: none;
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
+    }
+    .active {
+        display: block;
+    }
+    .section {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 15px;
+        border: 1px solid #ff0000;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+    .ascii {
+        white-space: pre;
+        font-size: 10px;
+        color: #fff;
+        text-align: center;
+        margin: 20px 0;
+    }
+    .gallery img {
+        width: 200px;
+        height: auto;
+        margin: 10px;
+        border: 2px solid #00ffea;
+        border-radius: 5px;
+        transition: transform 0.3s;
+    }
+    .gallery img:hover {
+        transform: scale(1.05);
+        border-color: #ff0044;
+    }
+    .links {
+        text-align: center;
+    }
+    .button {
+        display: inline-block;
+        margin: 5px;
+        padding: 10px 20px;
+        background: #ff0044;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+    .button:hover {
+        background: #ff3366;
+    }
+</style>
+</head>
+<body>
+
+<!-- background music -->
+<audio id="bgmusic" loop>
+    <source src="Music/feelz.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<header>
+    <h1>Reaper Syndicate</h1>
+    <p>VRChat & Discord Crashing Community</p>
+</header>
+
+<nav>
+    <button onclick="openTab('home')">Home</button>
+    <button onclick="openTab('about')">About Us</button>
+    <button onclick="openTab('gallery')">Gallery</button>
+    <button onclick="openTab('join')">Join The Cause</button>
+    <button onclick="openTab('asset')">Assets</button>
+</nav>
+
+<!-- homepage -->
+<div id="home" class="tab active">
+    <div class="ascii">
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢤⣶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⡾⠿⢿⡀⠀⠀⠀⠀⣠⣶⣿⣷⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣦⣴⣿⡋⠀⠀⠈⢳⡄⠀⢠⣾⣿⠁⠈⣿⡆⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣿⣿⠿⠛⠉⠉⠁⠀⠀⠀⠹⡄⣿⣿⣿⠀⠀⢹⡇⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣠⣾⡿⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⣰⣏⢻⣿⣿⡆⠀⠸⣿⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢀⣴⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣾⣿⣿⣆⠹⣿⣷⠀⢘⣿⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢀⡾⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⣿⠋⠉⠛⠂⠹⠿⣲⣿⣿⣧⠀⠀
+⠀⠀⠀⠀⠀⢠⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣿⣿⣿⣷⣾⣿⡇⢀⠀⣼⣿⣿⣿⣧⠀
+⠀⠀⠀⠀⠰⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣾⣿⣿⣿⣿⣿⣿⣿⣿⠀⡘⢿⣿⣿⣿⠀
+⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⣷⡈⠿⢿⣿⡆
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠛⠁⢙⠛⣿⣿⣿⣿⡟⠀⡿⠀⠀⢀⣿⡇
+    </div>
+
+    <div class="section">
+        <h2>Owners</h2>
+        <p><strong>Mr Error</strong> and <strong>Darkistooscary</strong></p>
+    </div>
+
+    <div class="section">
+        <h2>What We Offer</h2>
+        <ul>
+            <li>Audios</li>
+            <li>Assets</li>
+            <li>Stream Sniping</li>
+            <li>Crasher Sellers</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>What We Want</h2>
+        <ul>
+            <li>Stream Snipers</li>
+            <li>Toxic Community</li>
+            <li>Partnerships</li>
+            <li>More Members</li>
+            <li>People Who Make Avatars</li>
+        </ul>
+    </div>
+</div>
+
+<!-- about tab-->
+<div id="about" class="tab">
+    <div class="section">
+        <h2>About Us</h2>
+        <p>
+           Founded by <b> Darkistooscary</b> and <b> MrError </b> for the goal of perifying Vrchat 
+        </p>
+    </div>
+</div>
+
+<!-- GALLERY TAB -->
+<div id="gallery" class="tab">
+    <div class="section gallery">
+        <h2>Gallery</h2>
+        <img src="Pictures/forg.png">
+        <img src="Pictures/pawnsy.png">
+        <img src="Pictures/stickman.png">
+    </div>
+</div>
+
+<!-- join -->
+<div id="join" class="tab">
+    <div class="section links">
+        <h2>Join Reaper Syndicate</h2>
+        <a href="https://discord.gg/YVa6e8XWp7" class="button">Join on Discord</a>
+        <a href="https://vrchat.com/home/group/grp_382a75e5-5f14-424d-9bb0-68429c39cd55" class="button">Join Vrc Group</a>
+    </div>
+</div>
+
+<script>
+function openTab(tabId) {
+    document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+    document.getElementById(tabId).classList.add('active');
+}
+
+// music
+document.addEventListener("click", function() {
+    const bg = document.getElementById("bgmusic");
+    bg.volume = 0.1; // Set volume between 0.0 (silent) and 1.0 (full)
+    bg.play();
+}, { once: true });
+</script>
+
+<!-- assets -->
+<div id="asset" class="tab">
+    <div class="section">
+        <h2>Files</h2>
+        <p>Download our files here:</p>
+        <ul>
+            <li><a href="Assets/reaper.fbx" download>Reaper Syndicate Name</a></li>
+            <li><a href="Assets/ReaperCoffin.unitypackage" download>Reaper Syndicate Coffin</a></li>
+        </ul>
+    </div>
+
+
+</div>
+</body>
+</html>
