@@ -4,7 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Reaper Syndicate</title>
+<!-- Google Font: UnifrakturCook (Fraktur / Blackletter style) -->
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:ital,wght@0,700&display=swap" rel="stylesheet">
 <style>
+    /* Default site styling (keeps your original look) */
     body {
         font-family: 'Courier New', monospace;
         background-color: #0a0a0a;
@@ -12,6 +15,12 @@
         margin: 0;
         padding: 0;
     }
+
+    /* Fraktur font class — use this on any element you want to style */
+    .fraktur {
+        font-family: 'UnifrakturCook', 'Courier New', monospace;
+    }
+
     header {
         text-align: center;
         padding: 20px;
@@ -103,7 +112,8 @@
 </audio>
 
 <header>
-    <h1>Reaper Syndicate</h1>
+    <!-- applied fraktur class to the main heading -->
+    <h1 class="fraktur">Reaper Syndicate</h1>
     <p>VRChat & Discord Crashing Community</p>
 </header>
 
@@ -119,7 +129,7 @@
 <div id="home" class="tab active">
     <div class="ascii">
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢤⣶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⡾⠿⢿⡀⠀⠀⠀⠀⣠⣶⣿⣷⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⡾⠿⢿⡀⠀⠀⠀   ⠀⣠⣶⣿⣷⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣦⣴⣿⡋⠀⠀⠈⢳⡄⠀⢠⣾⣿⠁⠈⣿⡆⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣿⣿⠿⠛⠉⠉⠁⠀⠀⠀⠹⡄⣿⣿⣿⠀⠀⢹⡇⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⣠⣾⡿⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⣰⣏⢻⣿⣿⡆⠀⠸⣿⠀⠀⠀
@@ -132,7 +142,7 @@
     </div>
 
     <div class="section">
-        <h2>Owners</h2>
+        <h2 class="fraktur">Owners</h2>
         <p><strong>Mr Error</strong> and <strong>Darkistooscary</strong></p>
     </div>
 
@@ -143,6 +153,7 @@
             <li>Assets</li>
             <li>Stream Sniping</li>
             <li>Crasher Sellers</li>
+            <li>A Good Community</li>
         </ul>
     </div>
 
@@ -163,7 +174,7 @@
     <div class="section">
         <h2>About Us</h2>
         <p>
-           Founded by <b> Darkistooscary</b> and <b> MrError </b> for the goal of perifying Vrchat 
+           Founded by <b> Darkistooscary</b> and <b> MrError </b> for the goal of perifying Vrchat. 
         </p>
     </div>
 </div>
@@ -197,7 +208,7 @@ function openTab(tabId) {
 // music
 document.addEventListener("click", function() {
     const bg = document.getElementById("bgmusic");
-    bg.volume = 0.1;
+    bg.volume = 0.05;
     bg.play();
 }, { once: true });
 </script>
@@ -210,6 +221,7 @@ document.addEventListener("click", function() {
         <ul>
             <li><a href="Assets/reaper.fbx" download>Reaper Syndicate Name</a></li>
             <li><a href="Assets/ReaperCoffin.unitypackage" download>Reaper Syndicate Coffin</a></li>
+            <li><a href="Assets/reapernuke.unitypackage" download>Reaper Syndicate Crash Nuke</a></li>
         </ul>
     </div>
 
